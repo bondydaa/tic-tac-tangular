@@ -19,7 +19,7 @@ Inspired by the Front End Boilerplate used at [The Nerdery](http://www.nerdery.c
 
 ## Development
 
-1. In the web folder, run `vagrant up` to create a virtual machine bootstrapped to serve the web folder. Go to localhost:1337 to see the server root.
+1. In the project root, run `node server.js`, goto `localhost:1337`.
 2. In the project root, run `grunt watch` to have grunt listen for file changes and run tasks automatically.
 
 ## Technology Colophon
