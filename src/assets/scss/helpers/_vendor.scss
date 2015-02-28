@@ -1,0 +1,55 @@
+// Vendor Prefix Mixins
+// -----------------------------------------------
+
+@mixin opacity($degree) {
+    -moz-opacity: $degree;
+    -khtml-opacity: $degree;
+    opacity: $degree;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin border-radius($degree) {
+    -webkit-border-radius: #{$degree}px;
+    -moz-border-radius: #{$degree}px;
+    -khtml-border-radius: #{$degree}px;
+    border-radius: #{$degree}px;
+}
+
+@mixin transition($property, $speed) {
+    -webkit-transition: $property #{$speed}s ease-in-out;
+    transition: $property #{$speed}s ease-in-out;
+}
+
+@mixin background-tint($imgPath) {
+    background-image: $imgPath;
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4) 100%), $imgPath;
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4) 100%), $imgPath;
+    background-image: -ms-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4) 100%), $imgPath;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4) 100%), $imgPath;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#80000000', GradientType=1);
+}
+
+@mixin background-radial($innerColor, $outerColor) {
+    background-color: $outerColor;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background: -webkit-radial-gradient(circle, $innerColor 20%, $outerColor 85%);
+    background: -moz-radial-gradient(circle, $innerColor 20%, $outerColor 85%);
+    background: -ms-radial-gradient(circle, $innerColor 20%, $outerColor 85%);
+}
+
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+          transform: translate3d($x, $y, $z);
+}
+
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+     -moz-transition: -moz-transform $transition;
+       -o-transition: -o-transform $transition;
+          transition: transform $transition;
+}

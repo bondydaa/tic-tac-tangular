@@ -1,0 +1,23 @@
+/* ---------------------------------------------------------------------
+ WRAPPER
+------------------------------------------------------------------------ */
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper_site {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper_site-bd {
+    display: table-row;
+    height: auto;
+}
+
+.wrapper_site-ft {
+    display: table-row;
+    height: 1px;
+}

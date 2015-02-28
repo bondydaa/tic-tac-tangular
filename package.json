@@ -1,0 +1,18 @@
+{
+  "name": "fed-boilerplate",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://mhfen@bitbucket.org/mhfen/fed-boilerplate.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "time-grunt": "^1.0.0",
+    "grunt-bower-requirejs": "^0.7.1",
+    "grunt-contrib-copy": "^0.4.1",
+    "grunt-contrib-watch": "^0.5.3",
+    "assemble": "^0.4.42",
+    "grunt-sass": "^0.12.1",
+    "grunt-prettify": "^0.3.4"
+  }
+}

@@ -1,0 +1,17 @@
+// Mixins
+// -----------------------------------------------
+
+// Clearfix
+@mixin clearfix() {
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+// rem Fallback
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}

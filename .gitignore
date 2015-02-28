@@ -1,0 +1,23 @@
+# List files and folders for git to ignore
+
+.*.swp
+.DS_Store
+._.DS_Store
+.idea/*
+.tmp/
+
+# Project Files
+tmp/
+node_modules/
+npm-debug.log
+web/assets/
+src/assets/vendor/
+
+# Vagrant
+.vagrant
+
+# Sass
+.sass-cache
+
+# Bower
+src/assets/vendor
