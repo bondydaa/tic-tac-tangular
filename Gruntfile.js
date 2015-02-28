@@ -85,7 +85,8 @@ module.exports = function (grunt) {
                     src: [
                         'assets/media/**',
                         'assets/scripts/**/*.js',
-                        'assets/vendor/**/*.js'
+                        'assets/vendor/**/*.js',
+                        'assets/vendor/**/*.map'
                     ],
                     dest: '<%= config.dist %>'
                 }]
