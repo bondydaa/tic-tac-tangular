@@ -1,21 +1,12 @@
 #Tic-Tac-Tangular
 
-## FED Boilerplate
-
-Author: [Matt Fender](http://www.fender.me)
-
-[LICENSE](LICENSE)
-
-A ready-to-develop set of dependencies for a Front End Developer building static HTML.
-
-Inspired by the Front End Boilerplate used at [The Nerdery](http://www.nerdery.com).
+A simple tic tac toe game
 
 ## Installation
 
 1. Run `npm install` to install task dependencies.
 2. Run `bower install` to install project code dependencies.
-3. Run `grunt bower` to hook up bower dependencies and Requre.js.
-4. Run `grunt build` to create an initial build in the web folder.
+3. Run `grunt build` to create an initial build in the web folder.
 
 ## Development
 
@@ -31,9 +22,7 @@ Inspired by the Front End Boilerplate used at [The Nerdery](http://www.nerdery.c
 - angular-route
 - bootstrap-sass
 - handlebars
-- assemble
 - grunt-bower-requirejs
 - grunt-contrib-copy
 - grunt-contrib-watch
 - grunt-sass
-- grunt-prettify
