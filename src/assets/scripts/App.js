@@ -1,11 +1,14 @@
 angular.module('tic-tac-tangular', ['ngRoute'])
     .config(function($routeProvider){
         $routeProvider
-        .when('/'{
-            templateURL: 'home.html'
+        .when('/', {
+            templateUrl: '../../partials/home.html'
         })
-        .when('/game/',{
-            templateURL: 'gameboard.html'
+        .when('/game/', {
+            templateUrl: '/partials/gameboard.html'
+        })
+        .otherwise({
+            redirectTo: '/'
         });
     })
 
