@@ -1,23 +1,19 @@
 /* ---------------------------------------------------------------------
- WRAPPER
+ Site (sticky footer)
 ------------------------------------------------------------------------ */
 
-.wrapper {
-    position: relative;
-}
-
-.wrapper_site {
+.site {
     display: table;
     height: 100%;
     width: 100%;
 }
 
-.wrapper_site-bd {
+.site-bd {
     display: table-row;
     height: auto;
 }
 
-.wrapper_site-ft {
+.site-ft {
     display: table-row;
     height: 1px;
 }

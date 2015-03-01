@@ -30,52 +30,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // Compiles Handlebars files into HTML pages
-        assemble: {
-            options: {
-                assets: '<%= config.src %>/assets/**',
-                data:   '<%= config.src %>/assets/data/*.{json,yml}',
-                layoutdir: '<%= config.src %>/layouts',
-                partials: '<%= config.src %>/partials/**/*.hbs'
-            },
-            site: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= config.src %>',
-                    dest: '<%= config.tmp %>',
-                    ext: '.html',
-                    src: [
-                        '**/*.hbs',
-                        '!partials/**',
-                        '!layouts/**',
-                        '!assets/vendor/**'
-                    ]
-                }]
-            }
-        },
-
-        // Takes ugly handlebars compiled HTML and makes it pretty
-        prettify: {
-            site: {
-                options: {
-                    indent: 4,
-                    wrap_line_length: 999999,
-                    indent_inner_html: false,
-                    unformatted: [
-                        'a', 'b', 'code', 'i', 'p',
-                        'pre', 'small', 'span',
-                        'sub', 'sup', 'u', 'textarea'
-                    ]
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= config.tmp %>',
-                    dest: '<%= config.dist %>',
-                    src: ['**/*.html']
-                }]
-            }
-        },
-
         // Copies static files over to web folder
         copy: {
             site: {
@@ -83,6 +37,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= config.src %>',
                     src: [
+                        '**/*.html',
                         'assets/media/**',
                         'assets/scripts/**/*.js',
                         'assets/vendor/**/*.js',
@@ -96,8 +51,8 @@ module.exports = function (grunt) {
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             watchMarkup: {
-                files: ['<%= config.src %>/**/*.{hbs,html}'],
-                tasks: ['assemble:site', 'prettify:site']
+                files: ['<%= config.src %>/**/*.html'],
+                tasks: ['copy:site']
             },
             watchStatic: {
                 files: ['<%= config.src %>/assets/media/**'],
@@ -121,17 +76,13 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-bower-requirejs');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-prettify');
 
     grunt.registerTask('build', [
-        'assemble:site',
         'copy:site',
-        'sass:site',
-        'prettify:site'
+        'sass:site'
     ]);
 };
