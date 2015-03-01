@@ -1,0 +1,32 @@
+<div class="game-board-wrapper">
+    <svg width="100%" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+
+        </defs>
+        <g class="board">
+            <line x1="0" y1="33%" x2="100%" y2="33%" stroke="black" stroke-width="2"></line>
+            <line x1="0" y1="66%" x2="100%" y2="66%" stroke="black" stroke-width="2"></line>
+            <line x1="33%" y1="0" x2="33%" y2="100%" stroke="black" stroke-width="2"></line>
+            <line x1="66%" y1="0" x2="66%" y2="100%" stroke="black" stroke-width="2"></line>
+        </g>
+
+        <polygon points="0,0, 10,0 15,10 20,0 25,0 17,10 25,25 20,25 15,17 10,25 0,25 12,10"/>
+    </svg>
+
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <style>
+        .classA { fill:red }
+        </style>
+        <defs>
+            <circle style="fill:inherit" r="10" id="Port"/>
+        </defs>
+
+        <text y="15">black</text>
+        <use x="50" y="10" xlink:href="#Port" />
+        <text y="35">red</text>
+        <use x="50" y="30" xlink:href="#Port" class="classA"/>
+        <text y="55">blue</text>
+        <use x="50" y="50" xlink:href="#Port" style="fill:blue"/>
+     </svg>
+</div>
+
